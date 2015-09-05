@@ -312,6 +312,7 @@ public class MainActivity extends AppCompatActivity
             //llXAxis.setLabelPosition(LimitLabelPosition.POS_RIGHT);
             //llXAxis.setTextSize(10f);
             XAxis xAxis = lineChart.getXAxis();
+            xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
             //xAxis.addLimitLine(llXAxis);
             //LimitLine ll1 = new LimitLine(130f, "Upper Limit");
             //ll1.setLineWidth(4f);
@@ -343,10 +344,10 @@ public class MainActivity extends AppCompatActivity
                 yVals.add(new Entry((float)stocks[i].getValue(), i));
             }
             LineDataSet set = new LineDataSet(yVals, "Evolution Stock");
-            set.enableDashedLine(10f, 5f, 0f);
-            set.setColor(Color.BLACK);
-            set.setCircleColor(Color.BLACK);
-            set.setLineWidth(1f);
+            //set.enableDashedLine(10f, 5f, 0f);
+            set.setColor(ColorTemplate.VORDIPLOM_COLORS[3]);
+            set.setCircleColor(Color.DKGRAY);
+            set.setLineWidth(2f);
             set.setCircleSize(3f);
             set.setDrawCircleHole(false);
             set.setValueTextSize(9f);
